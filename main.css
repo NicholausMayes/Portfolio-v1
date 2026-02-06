@@ -1,0 +1,691 @@
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+
+a {
+    font-family: Poppins, sans-serif;
+    text-decoration: none;
+}
+
+.panel {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins, sans-serif;
+    font-size: 48px;
+}
+
+#home {
+    scroll-margin-top: 200px;
+}
+
+#about {
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.about h1 {
+    font-size: 60px;
+}
+
+.about .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 32px;
+    gap: 40px;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.about p {
+    line-height: 1.25;
+    max-width: 1000px;
+}
+
+.about-content img {
+    border-radius: 200px;
+    border: #00000063 2px solid;
+    margin-left: 20px;
+    transition: scale 0.25s ease;
+    box-shadow: 0 0 40px rgba(0, 0, 0);
+}
+
+.about .about-links {
+    display: flex;
+    gap: 20px;
+}
+
+.about .about-links a {
+    color: #ffffff;
+    font-size: 25px;
+    border: 2px solid #00000063;
+    border-radius: 40px;
+    padding: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0);
+}
+
+.about .about-links #Github {
+    background-color: #1b1b1b;
+}
+
+.about .about-links #LinkedIn {
+    background-color: #4f8cfc;
+}
+
+.about .about-links #Resume {
+    background-color: #6c009e;
+}
+
+.about .about-links #Email {
+    background-color: #ff3a3a;
+}
+
+.about .about-links svg {
+    position: relative;
+    top: 4px;
+}
+
+.about .about-links a:hover {
+    scale: 105%;
+}
+
+.about .about-links #Github:hover {
+    background-color: #1b1b1be5;
+}
+
+.about .about-links #LinkedIn:hover {
+    background-color: #4f8bfce8;
+}
+
+.about .about-links #Resume:hover {
+    background-color: #6c009ede;
+}
+
+.about .about-links #Email:hover {
+    background-color: #ff3a3ae3;
+}
+
+.about h2 {
+    justify-content: center;
+    align-items: center;
+}
+
+.about .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about .languages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+}
+
+.about .language {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 4px solid #0000001c;
+    box-shadow: 0 0 20px rgba(0, 0, 0);
+    padding: 8px;
+    border-radius: 20px;
+    width: 180px;
+    height: 180px;
+
+}
+
+.dark .about .language {
+    border: 4px solid #ffffff1c;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
+
+.about .language:hover {
+    scale: 105%;
+}
+
+.about-content img:hover {
+    scale: 105%;
+}
+
+.dark .about-content img {
+    border: #ffffff63 2px solid;
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.5);
+}
+
+#projects {
+    flex-direction: column;
+}
+
+#projects h1 {
+    font-size: 60px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#projects .project-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.dark #projects .project-card {
+    border: 4px solid #ffffff1c;
+    background-color: #000000;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    width: 1200px;
+    height: 400px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#projects .project-card {
+    border: 4px solid #ffffff1c;
+    background-color: #ffffff;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    width: 1200px;
+    height: 400px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#projects .project-content-left {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+#projects .project-content-left p {
+    font-size: 20px;
+}
+
+#projects .project-content-right img {
+    border-radius: 20px;
+    border: 2px solid #000000ab;
+}
+
+#projects .language {
+    display: flex;
+    gap: 20px;
+}
+
+.dark #projects .language a {
+    display: flex;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    padding: 3px;
+    box-shadow: 0 0 10px rgba(255, 255, 255);
+    font-size: 20px;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+#projects .language a {
+    display: flex;
+    border: 2px solid #000000c5;
+    border-radius: 20px;
+    padding: 3px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    font-size: 20px;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+#projects .language a:hover {
+    scale: 105%;
+}
+
+#contact {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 125px;
+}
+
+.contact-box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 48px;
+    width: 800px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-box {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-box:hover {
+    transform: translateY(-4px);
+}
+
+.contact-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.contact-links #linkedin-light {
+    display: none;
+}
+
+.dark .contact-links #linkedin {
+    display: none;
+}
+
+.dark .contact-links #linkedin-light {
+    display: inline;
+}
+
+.contact-links a {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    position: relative;
+    bottom: 60px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+.contact-links a:hover {
+    background-color: #d4d4d4;
+}
+
+.contact-links img {
+    position: relative;
+    top: 4px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+    background-color: rgba(196, 196, 196, 0.3);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background-color: rgba(172, 172, 172, 0.3);
+}
+
+
+.contact-form textarea {
+    resize: none;
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #000000;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff
+}
+
+.contact-form button:hover {
+    background-color: #272727;
+    cursor: pointer;
+}
+
+.dark .contact-box {
+    background: #000000;
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.12);
+}
+
+.dark .contact-links a {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.dark .contact-links a:hover {
+    background-color: #ffffffa6;
+}
+
+.dark .contact-form input,
+.dark .contact-form textarea {
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+}
+
+.dark .contact-form input:hover,
+.dark .contact-form textarea:hover {
+    background-color: #cacaca;
+}
+
+.dark .contact-form input:focus,
+.dark .contact-form textarea:focus {
+    background-color: #c4c4c4;
+}
+
+.dark .contact-form button {
+    border: none;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.dark {
+    background: #000000;
+    color: #ffffff;
+}
+
+.dark .navbar {
+    background-color: rgba(0, 0, 0);
+}
+
+.dark .nav-left a,
+.dark .nav-center a,
+.dark .nav-right #resume,
+.dark .hero h1,
+.dark .hero span.role,
+.dark .typed-cursor {
+    color: #ffffff;
+}
+
+.dark .arrow-down {
+    color: #ffffff;
+}
+
+.dark .icon {
+    border: 2px solid #ffffff;
+
+}
+
+.dark .icon:hover {
+    color: #000000;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.dark .nav-right #resume::after,
+.dark .nav-center a::after {
+    background-color: #ffffff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    padding: 15px 50px;
+    background-color: rgba(255, 255, 255);
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); */
+    z-index: 1000;
+}
+
+.nav-left a {
+    color: #000000;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.nav-center a {
+    position: relative;
+    color: #000000;
+    padding: 25px;
+    font-weight: 600;
+}
+
+.nav-center a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-center a:hover::after {
+    width: 60%;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right #resume {
+    position: relative;
+    color: #000000;
+    font-weight: 600;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    padding: 6px;
+    transition: all 0.3s ease;
+}
+
+.icon:hover {
+    width: 24px;
+    height: 24px;
+    color: #ffffff;
+    border: 2px solid #000000;
+    background-color: #000000;
+    border-radius: 20px;
+    padding: 6px;
+}
+
+.toggle {
+    position: relative;
+    top: 4px;
+    left: 5px;
+    height: 44px;
+    width: 44px;
+}
+
+.moon {
+    display: none;
+}
+
+.dark .sun {
+    display: none;
+}
+
+.dark .moon {
+    display: block;
+}
+
+.nav-right #resume::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    bottom: -10px;
+    background-color: #000000;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-right #resume:hover::after {
+    width: 100%;
+}
+
+.hero {
+    height: 100vh;
+    text-align: center;
+    font-weight: 600;
+    font-family: Poppins, sans-serif;
+}
+
+.hero-content {
+    position: relative;
+    top: 30%;
+    transform: translateY(-30%);
+}
+
+.hero h1 {
+    font-size: 72px;
+    margin-bottom: 20px;
+    color: #000000;
+    font-weight: 800;
+}
+
+.hero span.role {
+    font-size: 48px;
+    color: rgba(0, 0, 0);
+    margin-top: -20px;
+}
+
+.hero span.highlight {
+    animation: rainbow-color-change 15s linear infinite;
+}
+
+.typed-cursor {
+    font-size: 48px;
+    color: rgba(0, 0, 0);
+}
+
+.arrow-down {
+    color: #000000;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.arrow-down img:hover {
+    color: #000000;
+    height: 62px;
+    width: 62px;
+}
+
+.social-links {
+    position: relative;
+}
+
+.dark .arrow-down #down-arrow-light {
+    display: block;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.dark .footer-social-links svg {
+    color: #ffffff;
+}
+
+.dark .footer-social-links svg:hover {
+    color: #858585;
+}
+
+.footer-social-links svg {
+    color: #000000;
+}
+
+.footer-social-links svg:hover {
+    color: #858585;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rainbow-color-change {
+    0% {
+        color: red;
+    }
+    16.67% {
+        color: orange;
+    }
+    33.33% {
+        color: yellow;
+    }
+    50% {
+        color: green;
+    }
+    66.67% {
+        color: blue;
+    }
+    83.33% {
+        color: rgb(255, 87, 255);
+    }
+    100% {
+        color: red;
+    }
+}
